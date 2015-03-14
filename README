@@ -1,0 +1,11 @@
+# MyExpenses
+
+requires 'Python 2.7, PyQt4, numpy, matplotlib, MySQL, drivers for the PyQt4-MySQL interface (for Ubuntu: apt-get install libqt4-sql-mysql)'
+run 'python main.py'
+
+before running the programm you need to:
+	create a database named 'myexpenses': create database if not exists myexpenses;
+	(optional - create a new database user: create user '<username>'@'<hostname>' identified by '<password>'; grant usage on *.* to '<username>'@'<hostname>' identified by '<password>';  # hostname=localhost for your local MySQL version)
+	grant privileges to a user on that database: grant all privileges on myexpenses.* to '<username>'@'<hostname>'; flush privileges;  # hostname=localhost for your local MySQL version
+
+Do not use the application as the mysql root!
